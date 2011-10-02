@@ -1,10 +1,10 @@
 {
-  "name": "eclg-metrics",
+  "name": "metrics-collector`",
   "description": "",
   "version": "0.1.0",
-  "author": "Mike Brevoort <mikebre@ecollege.com>",
+  "author": "Mike Brevoort <mike@brevoort.com>",
   "contributors": [ 
-    { "name": "Mike Brevoort", "email": "mikebre@ecollege.com" }
+    { "name": "Mike Brevoort", "email": "mike@brevoort.com" }
   ],
   "dependencies": {
     "metrics": "0.1.4",
@@ -12,7 +12,7 @@
   },
   "devDependencies": {
   },
-  "keywords": ["metrics", "ecollege", "pearson"],
-  "scripts": { "test" : "make test" },
+  "keywords": ["metrics", ],
+  "scripts": {  },
   "engines": { "node": ">= 0.4.8" }
 }
