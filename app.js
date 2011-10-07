@@ -4,6 +4,10 @@
 var udpCollector = require('./index').collector.udp.create(40000, "localhost");
 var state = require('./index').state;
 var harvester = require('./index').harvester;
+harvester.init(harvester.MINUTE);
+
+
+var publisher = require('./index').publisher.disk.create('/tmp');
 
 // setInterval( function() {
 //     console.log( require('util').inspect(state.snapshot(), false, 10) );
@@ -12,9 +16,9 @@ var harvester = require('./index').harvester;
 
 // }, 2000);
 
-harvester.init(harvester.MINUTE);
 
-harvester.on('harvest', function(data, date, period) {
-	console.log(date);
-	console.log(data);
-});
+
+// harvester.on('harvest', function(data, date, period) {
+// 	console.log(date);
+// 	console.log(data);
+// });
