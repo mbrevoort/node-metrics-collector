@@ -1,3 +1,6 @@
 module.exports.client = require('./lib/client');
-module.exports.collector = require('./lib/collector');
-module.exports.graphite = require('./lib/graphite');
+module.exports.state = require('./lib/state');
+module.exports.collector = {};
+module.exports.collector.udp = require('./lib/collector/udp');
+
+module.exports.harvester = require('./lib/harvester');
