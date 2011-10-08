@@ -2,6 +2,7 @@
 //   , collector 	= require('./index').collector.create(40000, "localhost");
 
 var udpCollector = require('./index').collector.udp.create(40000, "localhost");
+var tcpCollector = require('./index').collector.tcp.create(10000, "localhost");
 var state = require('./index').state;
 var harvester = require('./index').harvester;
 harvester.init(harvester.MINUTE);
