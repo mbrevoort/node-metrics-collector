@@ -7,3 +7,4 @@ module.exports.harvester = require('./lib/harvester');
 
 module.exports.publisher = {};
 module.exports.publisher.disk = require('./lib/publisher/disk');
+module.exports.publisher.graphite = require('./lib/publisher/graphite');

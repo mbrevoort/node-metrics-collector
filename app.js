@@ -6,19 +6,5 @@ var state = require('./index').state;
 var harvester = require('./index').harvester;
 harvester.init(harvester.MINUTE);
 
-
 var publisher = require('./index').publisher.disk.create('/tmp');
-
-// setInterval( function() {
-//     console.log( require('util').inspect(state.snapshot(), false, 10) );
-//     // graphite.sendCollectorState( collector.snapshot() );
-//     // collector.clear();
-
-// }, 2000);
-
-
-
-// harvester.on('harvest', function(data, date, period) {
-// 	console.log(date);
-// 	console.log(data);
-// });
+var graphite = require('./index').publisher.graphite.create(41000, "localhost", true);
